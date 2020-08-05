@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    <title>InvoiceIt - FAQ</title>
+{% endblock title %}
+{% block page_style %}
+    <link rel="stylesheet" href="{% static 'css/loading-animation.css' %}">
+{% endblock page_style %}
+
+{% block content %}
+
+<!-- Enter your text here -->
+  <div class="container">
+    <div class="loading">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+     
+  </div>
+  <p class="text-center">Loading, please wait...</p>
+
+
+{% endblock content %}

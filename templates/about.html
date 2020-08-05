@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+  <title>Invoice Generator | About</title>
+{% endblock title %}
+
+{% block page_style %}
+<link rel="stylesheet" href="{% static 'css/animate.css' %}">
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+{% endblock page_style %}
+
+{% block content %}
+
+  <!-- ABOUT US CONTENT SECTION -->
+
+  <section class="about-header">
+    <div class="container-fluid">
+     <div class="about-text">
+      <h1>About Us</h1>
+     </div>
+    </div>
+    <div class="row">
+     <div class=" col-xs-9 col-sm-9 col-md-9 second">
+      <h2 class=" wow fadeInUp">INVOICE GENERATOR</h2>
+      <p>Is a Co-Operative Company by the Group 1 company . An initiative Organization of the HNG teamless interns </p>
+      <ul>
+       <li class="int">Est. 1990, FEB 21th.</li>
+       <div>
+        <i class="fa fa-building my-3  wow slideInRight slow"></i>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat eum animi suscipit nesciunt maxime maiores, assumenda laudantium eaque earum a?</p>
+       </div>
+       <hr>
+       <li class="int">We are proud to be the top choice among millions of platform.</li>
+       <div>
+        <i class="fa fa-bar-chart my-3 wow fadeInUp slow"></i>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat eum animi suscipi animi suscipit nesciunt maxime maiores, assumenda laudantium eaqueanimi suscipit nesciunt maxime maiores, assumenda laudantium eaquet nesciunt maxime maiores, assumenda laudantium eaque earum a?</p>
+       </div>
+       <hr>
+       <li class="int">Safety And Security Warrant</li>
+       <div>
+        <i class="fa fa-lock my-3 wow slideInLeft slow"></i>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat eum animi suscipit nesciunt maxime maiores, assumenda laudantium eaqueanimi suscipit nesciunt maxime maiores, assumenda laudantium eaqueanimi suscipit nesciunt maxime maiores, assumenda laudantium eaque earum a?</p>
+       </div>
+       <hr>
+      </ul>
+      <div class="buttom-icon">
+        <i class="fa fa-file-excel-o"></i>
+      <i class="fa fa-file-word-o"></i>
+      <i class="fa fa-file-pdf-o"></i>
+      </div>
+      <div class="first">
+        <ul>
+          <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
+          <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+          <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+         </ul>
+       </div>
+     </div>
+     <div class="col-xs-3 col-sm-3 col-md-3">
+      <div class="image-cont  wow fadeInDown">
+       <img src="{% static 'images/download (1).png' %}" alt="">
+       <div class="about-but">
+         <li ><a href="#">View more<i class="fa fa-arrow-right mx-3 animated rubberBand infinite "></i></a></li>
+       </div>
+      </div>
+      <div class="image-cont  wow slideInLeft">
+        <img src="{% static 'css/images.png' %}" alt="">
+        <div class="about-but">
+          <li ><a href="#">View more<i class="fa fa-arrow-right mx-3 animated rubberBand infinite "></i></a></li>
+        </div>
+       </div>
+       <div class="image-cont  wow fadeInUp">
+        <img src="{% static 'images/download.png' %}" alt="">
+        <div class="about-but">
+          <li ><a href="#">View more<i class="fa fa-arrow-right mx-3 animated rubberBand infinite "></i></a></li>
+        </div>
+       </div>
+     </div>
+    </div>
+   </section>
+ 
+{% endblock %}
+
+{% block page_script %}
+<script src="{% static 'js/wow.js' %}"></script>
+<script src="{% static 'js/about.js' %}"></script>
+{% endblock page_script %}

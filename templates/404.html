@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    <title>InvoiceIt - Create Invoice</title>
+{% endblock title %}
+{% block page_style %}
+    <link rel="stylesheet" href="{% static 'css/404.css' %}">
+{% endblock page_style %}
+
+
+{% block content %}
+
+<div class="text-center">
+
+   
+    <div data-aos="fade-left" class="header_img">
+        <img  class="img-fluid" src="{% static 'images/stat_header_img.png' %}" alt="">
+    </div>
+
+    <div class="row text-center">
+        <div class="col-md-3 col-12"></div>
+        <div class="col-md-6 col-12">
+            <h1 class="pgtext font-weight-bolder">Page not found</h1>
+            <p class="mt-4 mb-4"> <span class="">Take a breathe ! </span> Try going back to the previous page or see our <span class="spanGuide font-weight-bolder"><a href="./guide.html">Guide Center</a> </span> </p>
+
+            <a href="./index.html"><img class="mb-4 logo__img" src="{% static 'images/logo.svg' %}"></a>
+
+            <p class="font-weight-bold mt-4">Stay up to date with all InvoiceIt news</p>
+            
+        </div>
+        <div class="col-md-3 col-12"></div>
+    </div>
+
+    <div class="row text-center">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="row">
+               
+                <div class="col-md-8 text-center sub">
+                    <form action="">
+                        <input class="form-control" type="text" name="" id="" placeholder="Email Address">
+                    </form>
+                </div>
+                <div class="col-md-4 text-center">
+                    <button class="btn text-light subscribe font-weight-bold ">Subscribe</button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+
+
+</div>
+
+
+{% endblock content %}
+
+
+{% block page_script %}
+    <script src="{% static 'js/404.js' %}" ></script>
+{% endblock page_script %}

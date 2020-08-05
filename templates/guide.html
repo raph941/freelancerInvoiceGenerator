@@ -1,0 +1,263 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+  <title>Invoice Generator | InvoiceGuide</title>
+{% endblock title %}
+
+{% block page_style %}
+<link rel="stylesheet" href="{% static 'css/guide.css' %}">
+{% endblock page_style %}
+
+{% block content %}
+
+    <main>
+      <div class="jumbotron jumbotron-fluid p-0 d-block d-lg-none mb-4">
+        <div class="underlay">
+          <div class="overlay w-100 h-100">
+            <h1 class="text-center">Invoice Guide</h1>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="jumobotron jumbotron-fluid p-0 d-none d-lg-block mw-100 mb-5"
+        style="background-color: #06c7b4; border-radius: 0px 0px 25px 25px;"
+      >
+        <div class="row px-0">
+          <div class="col-lg-6 px-0" style="border-radius: 0px 0px 0px 25px;">
+            <img
+              src="{% static 'images/3992745.jpg' %}"
+              alt=""
+              class="img-fluid w-100 d-block"
+            />
+          </div>
+          <div class="col-lg-6 px-0 w-100">
+            <h1 class="text-center justify-item-center">Invoice Guide</h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="container mw-100 px-md-5 px-xl-5">
+        <div class="row px-md-5 px-xl-5 flex-xl-nowrap">
+          <div class="col-xl-8">
+            <div class="col-12 mt-5 mb-3 mb-xl-5">
+              <h5>Welcome to the Invoice Generator by InvoiceIt</h5>
+              <p>
+                We make invoice generation easier with our amazing application
+                that allows you to generate your invoice for FREE. Take a dive
+                with me to see how it works and how you can navigate through
+                easily.
+              </p>
+            </div>
+
+            <!--WHAT IS AN INVOICE-->
+            <div class="col-12 mb-4 mb-xl-5" id="invoice-1">
+              <div class="invoice-title text-center mx-5 mb-3">
+                <h6>What is an invoice?</h6>
+                <div
+                  class="progress mx-auto"
+                  style="background-color: #f2f2f2; height: 10px; width: 150px;"
+                >
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    style="width: 50%; background-color: #07e0cb;"
+                    aria-valuenow="50"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+              <div class="text-content">
+                <p>
+                  An invoice is a list of goods sent or services provided, with
+                  a statement of the sum due for these; a bill. It is the
+                  detailed summary of services rendered and the cost for the
+                  services. It can be seen as a record of transaction between a
+                  customer and the seller.
+                </p>
+              </div>
+            </div>
+
+            <!--WHY DO YOU NEED AN INVOICE-->
+            <div class="col-12 mb-4 mb-xl-5" id="invoice-2">
+              <div class="invoice-title text-center mx-4 mb-3">
+                <h6>Why do you need an invoice?</h6>
+                <div
+                  class="progress mx-auto"
+                  style="background-color: #f2f2f2; height: 10px; width: 150px;"
+                >
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    style="width: 50%; background-color: #07e0cb;"
+                    aria-valuenow="50"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+              <div class="text-content">
+                <p>
+                  As someone that renders services, you need to be able to have
+                  a document that clearly states the service rendered and the
+                  equivalent cost because without this, you do not have an
+                  evidence of what you have done and you cannot keep track of
+                  pending payments from customers. Invoice, is therefore very
+                  important.
+                </p>
+              </div>
+            </div>
+
+            <!--CREATING AN INVOICE-->
+            <div class="col-12 mb-4 mb-xl-5" id="invoice-3">
+              <div class="invoice-title text-center mx-4 mb-3">
+                <h6>Creating an Invoice</h6>
+                <div
+                  class="progress mx-auto"
+                  style="background-color: #f2f2f2; height: 10px; width: 150px;"
+                >
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    style="width: 50%; background-color: #07e0cb;"
+                    aria-valuenow="50"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+              <div class="text-content">
+                <p>
+                  To create an invoice using the invoice Generator is super
+                  easy. There is a given set of guidelines to follow in order to
+                  have a seamless flow while using the application. To do this,
+                  you need to fill out the form with the necessary details.
+                </p>
+                <ol>
+                  <li>Numbering of invoices</li>
+                  <p>
+                    This is a basic numbering of the invoices to avoid mix-up
+                    and confusion. For instance, if your invoice spans multiple
+                    pages, the numbering allows you to know the order in which
+                    the invoices can be displayed
+                  </p>
+                  <li>Invoice date, Due date</li>
+                  <p>
+                    The invoice date is the date in which the invoice was
+                    created and presented to the customer. The due date is the
+                    date in which the payment is supposed to be made to you.
+                  </p>
+                  <li>Services and Goods Information</li>
+                  <p>
+                    This is a breakdown of the services rendered and the
+                    description of the services with their specified prices or
+                    cost based on the rate and quantity given to the customer.
+                  </p>
+                  <li>Price, payment type</li>
+                  <p>
+                    Total price of services rendered and the method of payment
+                    should be added to the invoice. Method of payment can be via
+                    transfer, cash and so on.
+                  </p>
+                  <li>Customer details</li>
+                  <p>
+                    This refers to the customer’s name, address, business name,
+                    email, phone number. This enables you to be able to keep
+                    track of your customers using their details.
+                  </p>
+                  <li>Invoice creator’s details</li>
+                  <p>
+                    This includes your contact information: your name, address
+                    email, phone number, billing address and so on.
+                  </p>
+                </ol>
+              </div>
+            </div>
+
+            <!--EXPORTING YOUR INVOICE-->
+            <div class="col-12 mb-4 mb-xl-5" id="invoice-4">
+              <div class="invoice-title text-center mx-4 mb-3">
+                <h6>Exporting your invoice</h6>
+                <div
+                  class="progress mx-auto"
+                  style="background-color: #f2f2f2; height: 10px; width: 150px;"
+                >
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    style="width: 50%; background-color: #07e0cb;"
+                    aria-valuenow="50"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+              <div class="text-content">
+                <p>
+                  When generating your invoice, there is a button that tells you
+                  to export your invoice. If you are a new user, once you click
+                  on the button, it automatically redirects you to the sign up
+                  page to register your account. This procedure is to guarantee
+                  safe keeping of your invoice, in case it is needed for other
+                  purposes.
+                </p>
+              </div>
+            </div>
+
+            <!--VIEWING ALL INVOICES-->
+            <div class="col-12 mb-4 mb-xl-5" id="invoice-5">
+              <div class="invoice-title text-center mx-4 mb-3">
+                <h6>Viewing all invoices</h6>
+                <div
+                  class="progress mx-auto"
+                  style="background-color: #f2f2f2; height: 10px; width: 150px;"
+                >
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    style="width: 50%; background-color: #07e0cb;"
+                    aria-valuenow="50"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+              <div class="text-content">
+                <p>
+                  As a user, once you are logged in, you can view your previous
+                  invoices by accessing the View Invoices on the sidebar. This
+                  is where you can view all the previous invoices, export them
+                  if you want to. This is very good as you know that your
+                  invoices are stored and can be used later on.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-1 d-none d-xl-block"></div>
+          <div class="col-xl-3 mt-5 d-none d-xl-block bd-toc">
+            <p class="font-weight-bold">Table of Content</p>
+            <ul class="section-nav">
+              <li class="toc-entry toc-h2">
+                <a href="#invoice-1">What is an Invoice?</a>
+              </li>
+              <li class="toc-entry toc-h2">
+                <a href="#invoice-2">Why do you need an Invoice?</a>
+              </li>
+              <li class="toc-entry toc-h2">
+                <a href="#invoice-3">Creating an Invoice</a>
+              </li>
+              <li class="toc-entry toc-h2">
+                <a href="#invoice-4">Exporting your Invoice</a>
+              </li>
+              <li class="toc-entry toc-h2">
+                <a href="#invoice-5">Viewing all Invoices</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+
+  {% endblock %}

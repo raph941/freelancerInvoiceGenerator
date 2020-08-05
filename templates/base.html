@@ -1,0 +1,95 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/logo.svg' %}">
+  <!-- Title -->
+  {% block title %}
+  {% endblock title %}
+  <!-- Css sheet -->
+  <link rel="stylesheet" href="{% static 'css/header-footer.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+  <!-- Font Awesome -->
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  <!-- Bootstrap CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'css/login.css' %}">
+  {% block page_style %}
+  {% endblock page_style %}
+
+</head>
+<body>
+  <header id="header" class=" container">
+    <nav class="navbar w-100">
+      <a href="{% url 'home' %}">
+        <img class="logo__img" src="{% static 'images/logo.svg' %}">
+      </a>
+      <ul class="">
+      {% if user.is_authenticated %}
+        <li class="header__link sign__up"><a href="{% url 'logout' %}">Sign out</a></li>
+      {% else %}
+        <li class="header__link2 sign__up anti_anon_btn" style="display:none"><a href="{% url 'logout' %}">Sign out</a></li>
+        <li class="header__link"><a id="login_btn" href="">Sign In</a></li>
+        <li class="header__link sign__up"><a id="signup_btn" href="">Sign Up</a></li>
+      {% endif %}
+      </ul>
+    </nav>
+  </header>
+  <div class="container general-alerts"></div>
+  {% include "partials/login_modal.html" %}
+  {% include "partials/signup_modal.html" %}
+  <!-- Enter your text here -->
+  {% block content %}
+
+  {% endblock content %}
+
+  <footer class="mt-5">
+    <div class="container row m-auto p-5">
+      <div class="col-lg-4">
+        <img class="mb-4 logo__img" src="{% static 'images/footer-logo.svg' %}">
+        <p>Invoice generator on-the-go for all freelancers. Super easy and fast. Look professional with InvoiceIt</p>
+      </div>
+    <ul class="col-lg">
+      <li>Explore</a></li>
+      <li><a href="{% url 'about' %}">About InvoiceIt</a></li>
+      <li><a href="#">Browse Templates</a></li>
+      <li><a href="{% url 'faq' %}">Help</a></li>
+    </ul>
+    <ul class="col-lg">
+      <li>Legal</li>
+      <li><a href="{% url 'privacy' %}">Privacy Policy</a></li>
+      <li><a href="#">Terms of Use</a></li>
+      <li><a href="#">Cookie Policy</a></li>
+    </ul>
+    <div class="col-lg">
+      <ul>
+        <li>Contact</li>
+        <li><a href="">Support</a></li>
+      </ul>
+      <section>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-youtube"></i></a>
+      </section>
+    </div>
+  </div>
+    <div class="col-12 p-4 trademark text-center">
+      <small>&copy; InvoiceIt, All Rights Reserved</small>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+ {% block page_script %}{% endblock page_script %}
+</body>
+</html>

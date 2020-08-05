@@ -1,0 +1,140 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+  <title>Invoice Generator | Home</title>
+{% endblock title %}
+
+{% block page_style %}
+<link rel="stylesheet" href="{% static 'css/landingpage.css' %}">
+{% endblock page_style %}
+
+{% block content %}
+  <section class="mt-5">
+      <div class="one"> 
+          <div class="one1">
+          <h2>With <span class="one3">InvoiceIt</span> , generate professional invoices for your business</h2>
+            <p>From our over 50 invoice templates, create, send or save 
+              professional invoices to your clients for free.
+               Super quick and easy! 
+            </p>
+            <a href="{% url 'create_invoice' %}"><button class="btn1">Create an Invoice</button></a>
+            <a href="#"><button class="btn2">Browse 50 Invoice Templates</button></a>
+          </div>
+          <div class="one2">
+            <img src="{% static 'images/sent.png' %}" alt="">
+          </div>
+      </div>
+      
+  </section>
+    <section class="two">
+        <div class="two1">
+            <h2>Why you need InvoiceIt</h2>
+          <p>Leave the hussle involved in creating an invoice from scratch to us. With our invoice generator, you can generate
+              as many invoices as you want.
+          </p>
+        </div>
+        <div class="two2">
+            <div class="two3">
+                <div class="two4">
+                    <h5>Easy to use</h5>
+                    <p>The invoice generator is designed to give you the best creating experience and simple navigation.</p>
+                </div>
+                <div class="two5">
+                    <h5>Easy to use</h5>
+                    <p>The invoice generator is designed to give you the best creating experience and simple navigation.</p>
+                </div>
+                <div class="two6">
+                    <h5>High-quality file</h5>
+                    <p>The invoice generator is designed to give you the best creating experience and simple navigation.</p>
+                </div>
+            </div>
+        </div>
+          
+          
+  </section>
+
+  <section>
+      <div class="three">
+          <div class="three1"> 
+               <h2>Invoice templates perfect for your needs</h2>
+               <p>All you have to do is select the invoice template that suites your business. Using our invoice generator tool, 
+                  begin customising the template according to your need then click download
+               </p>
+               <p><strong>jpg <span class="three2">png</span>  <span class="three2">pdf</span>  <span class="three2">doc</span> </strong></p>
+          </div>
+          <div>
+
+          </div>
+         
+
+      </div>
+  </section>
+
+  <section>
+      <div class="four">
+          <div class="four1">
+              <h2>Look professional with InvoiceIt</h2>
+              <p>All our over 50 free templates have been beautifully designed with high
+                   requirements to give your business a professional look
+              </p>
+              <div class="four2">
+                <img src="{% static 'images/Group 1 (3).png' %}" alt="">
+              </div>
+
+          </div>
+      </div>
+  </section>
+  <section>
+      <div class="five">
+          <h2>Categories</h2>
+          <div class="five1">
+            <div class="five2">
+                <p><strong>Sales</strong></p>
+                <p><strong>Photography</strong></p>
+                <p><strong>Consultant</strong></p>
+                <p><strong>Proforma</strong></p>
+                <p><strong>Software Developer</strong></p>
+                <p><strong>Designer</strong></p>
+            </div>
+            <div class="five2">
+                <p><strong>Sales</strong></p>
+                <p><strong>Photography</strong></p>
+                <p><strong>Consultant</strong></p>
+                <p><strong>Proforma</strong></p>
+                <p><strong>Software Developer</strong></p>
+                <p><strong>Designer</strong></p>
+            </div>
+            <div class="five2">
+                <p><strong>Sales</strong></p>
+                <p><strong>Photography</strong></p>
+                <p><strong>Consultant</strong></p>
+                <p><strong>Proforma</strong></p>
+                <p><strong>Software Developer</strong></p>
+                <p><strong>Designer</strong></p>
+            </div>
+            <div class="five2">
+                <p><strong>Sales</strong></p>
+                <p><strong>Photography</strong></p>
+                <p><strong>Consultant</strong></p>
+                <p><strong>Proforma</strong></p>
+                <p><strong>Software Developer</strong></p>
+                <p><strong>Designer</strong></p>
+            </div>
+
+        </div>
+      </div>
+  </section>
+  <section class="six">
+      <div class="six1">
+          <h2>More awesome templates coming soon</h2>
+          <p>Subscribe to our newsletter to recieve updates on our newest Invoive templates.
+              Don't miss out.
+          </p>
+          <input type="text" placeholder="Type your email address"><button>Subscribe</button>
+      </div>
+  </section>
+
+  <!-- Enter your text here -->
+
+{% endblock content %}

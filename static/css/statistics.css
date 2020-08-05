@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    overflow-x: hidden;
+}
+.row {
+    width: 100%;
+}
+
+.pie_chart {
+    width: 900px;
+    height: 500px;
+}
+
+.chartStmt {
+    background-color: #152724;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 20px;
+}
+
+
+
+.performanceStatement {
+    margin-left: 2%;
+    margin-right: 5%;
+}
+
+.performanceStatement p {
+    margin-top: 15%;
+}
+
+@media (max-width: 600px) {
+    .performanceStatement {
+        margin-left: 1%;
+        margin-right: 2%;
+    }
+
+    .chartStmt {
+        font-size: 20px;
+    }
+    
+};
+
+@media (max-width: 500px) {
+    .pie_chart {
+        width: 300px;
+        height: 400px;
+    }
+  
+};

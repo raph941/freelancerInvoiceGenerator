@@ -1,0 +1,79 @@
+body {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 200;
+}
+
+h1 {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+    font-size: 70px;
+}
+
+h4 {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+    font-size: 32px;
+}
+
+.signinform {
+    border: thin #c4c4c4 solid;
+    border-radius: 1% 1% 1% 1%;
+    margin: auto;
+}
+
+a {
+    color: #000;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #000;
+}
+
+
+form#loginform button{
+    background:#07E0CB;
+    border: none;
+}
+
+form#loginform button:hover {
+    background:#06C7B4;
+    border: none;
+}
+
+ div.floatright a, div.floatright p{
+     font-size: 16px;
+ }
+ 
+
+@media only screen and (max-width: 770px) {
+    
+    h2{
+        font-size: 2px larger;
+    }
+    h5{
+        font-size: larger;
+    }
+    .float-left{
+        text-align: center;
+        margin-left: 100px;
+    }
+    .signinform {
+        width: 85%;
+        margin-left: 8%;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    
+    h2{
+        font-size: 1px larger;
+    }
+    h5{
+        font-size: large;
+    }
+    .float-left{
+        text-align: center;
+        margin-left: 100px;
+    }
+}

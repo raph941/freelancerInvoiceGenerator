@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    height: 100vh;
+}
+
+.row  {
+    width: 100%;
+}
+
+.spanGuide a {
+    color: peru;
+}
+
+.btn {
+    background-color:  #152724!important;
+}
+
+#particles-js {
+    
+    height: 100vh;
+    
+}
+
+@media (max-width: 760px) {
+    .btn {
+        margin-top: 10px !important;
+    }
+    .pgtext {
+        font-size: 30px !important;
+    }
+    .sub {
+        margin-left: 20px !important;
+    }
+};

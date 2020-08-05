@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Invoice Settings</title>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <!-- Css stylesheet -->
+    <link rel="stylesheet" href="./assets/css/invoice-settings.css">
+</head>
+<body>
+    <div class="settings-modal">
+                <form class="settings-form" action="settings" method="POST" action="#">
+                    <span class="closebtn">&times;</span>
+                    <p>Branding Options</p>
+                    <p>Logo</p>
+                    <div class="upload-area">
+                        <p class="text-grey">Drag Logo here or upload file here</p>
+                    </div>
+                    <div class="brand-color">
+                        <div class="text-bc">Brand Color</div>
+                        <div class="colors-box">
+                            <span class="color-text" id="color-value">#0ABAB5 <i class="caret"></i></span><input class="colors" type="color" name="favcolor" value="#0ABAB5">
+                        </div>
+                    </div>
+
+                    <div class="samples">
+                        <p class="title-text">Sample Title</p>
+                        <button class="button_1">Sample Button</button>
+                    </div>
+
+                    <button type="submit" class="button_2">SAVE SETTINGS</button>
+                </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,205 @@
+
+
+body{
+ font-family: 'Ubuntu', sans-serif;
+ padding: 0;
+}
+h1,h2,h3,h4{
+ color:  #0D0D0D;
+}
+p,a{
+ color:black;
+}
+
+.about-header{
+ text-align: center;
+ background: linear-gradient(to right, rgba(0, 0, 0, 0.11) , rgba(0, 0, 0, 0.158)),url('./download.png');
+ background-repeat: no-repeat;
+ background-position: center;
+ background-size: cover;
+ overflow: hidden;
+ padding: 20px;
+ padding-top: 30px;
+ padding-bottom: 30px;
+}
+ul{
+ text-align: left;
+}
+.about-header .int{
+ color: #035951;
+ font-weight: 600;
+ font-style: italic;
+ margin-top:20px;
+}
+.second i{
+ font-size: 35px;
+ color:  #036158;
+}
+.about-header .first ul{
+ list-style: none;
+ margin-top: 90px;
+}
+.about-text h1{
+ color: #035951;
+ border-bottom:2px solid #035951;
+}
+.second h2{
+ color: #035951;
+}
+.about-text{
+ margin-bottom:50px;
+}
+.buttom-icon{
+ margin-top: 50px;
+}
+.buttom-icon i{
+ margin: 10px;
+}
+.about-header li{
+ margin-top: 20px;
+}
+.about-header .first i{
+ font-size: 27px;
+ color: #035951;
+}
+.about-header .first i:hover{
+ transform-origin: left;
+ transform: rotate(15deg);
+}
+.image-cont{
+ width: 90%;
+ margin: auto;
+ overflow: hidden;
+ height: 400px;
+ margin-top: 20px;
+}
+.image-cont img{
+ width: 100%;
+ height: 300px;
+ margin-bottom: 20px;
+}
+.about-but a{
+ padding: 20px;
+ background: #036158;
+ color: white;
+ width: 100%;
+}
+.about-but li{
+ padding: 0;
+ list-style: none;
+}
+.first li{
+ display: inline;
+ margin: auto 10px;
+}
+@media screen and (max-width: 900px){
+
+ .about-header .first ul{
+  padding: 0;
+  margin: auto;
+  margin-top: 0px;
+ }
+ .first{
+  text-align: center;
+  margin: auto;
+  margin-bottom: 20px;
+ }
+ .first li{
+  display: inline;
+  margin: auto 10px;
+ }
+ .second h2{
+  font-size:23px;
+  font-weight: 600;
+ }
+}
+
+header nav {
+ padding: 10px 0 !important;
+}
+
+header nav ul {
+ margin: 0;
+ padding: 0;
+ display: flex;
+}
+
+header nav ul li {
+ padding: .7rem 1rem;
+ list-style: none;
+ border: 2px solid white;
+ border-radius: 5px;
+ margin: 0 10px;
+ cursor: pointer;
+}
+
+header nav ul li a {
+ color: #152724;
+}
+
+header nav ul li a:hover {
+ text-decoration: none;
+ color: #152724;
+}
+
+header nav ul li:hover {
+ border-color: #2C988E;
+ color: #152724;
+}
+
+header nav ul .sign__up {
+ background-color: #07EDD6;
+}
+
+header nav ul .sign__up a {
+ color: black !important;
+}
+
+header nav ul .sign__up:hover {
+ background-color: #06C7B4;
+}
+
+header nav ul .sign__up:hover a {
+ color: white !important;
+}
+
+footer {
+ background-color: #152724;
+ color: #E5FDF8;
+ font-size: 18px;
+ font-weight: 300;
+ line-height: 2;
+}
+
+footer a {
+ color: #E5FDF8;
+}
+
+footer a:hover {
+ color: #10d3aa;
+ text-decoration: none;
+}
+
+footer ul {
+ padding: 0;
+}
+
+footer ul li {
+ list-style: none;
+}
+
+footer ul li:nth-child(1) {
+ font-size: 22px;
+ color: white;
+ font-weight: 500;
+ padding-bottom: 1rem;
+}
+
+footer i {
+ margin: 0 10px;
+ font-size: 25px !important;
+}
+
+footer .trademark {
+ border-top: 1px solid rgba(122, 122, 122, 0.5);
+}

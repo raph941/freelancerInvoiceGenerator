@@ -1,0 +1,96 @@
+body {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 200;
+
+}
+
+h1 {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+    font-size: 72px;
+}
+
+h4 {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+    font-size: 32px;
+}
+
+.signinform {
+    border: thin #c4c4c4 solid;
+    border-radius: 1% 1% 1% 1%;
+    max-width: 500px;
+    margin: auto;
+}
+
+a {
+    color: #000;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #000;
+}
+
+
+/* .btn-success {
+    background-color: #0ABAB5;
+    border: thin #0ABAB5 solid;
+}
+
+.btn-success:hover {
+    background-color: #0ABAB5;
+    border: thin #0ABAB5 solid;
+}
+ */
+
+form#loginform button{
+    background:#07E0CB;
+    border: none;
+}
+
+form#loginform button:hover {
+    background:#06C7B4;
+    border: none;
+}
+
+ div.floatright a, div.floatright p{
+     font-size: 16px;
+ }
+
+.error{
+    background-color: red;
+}
+
+.mt-5, .my-5 {
+    margin: 6rem auto !important;
+}
+
+@media only screen and (max-width: 770px) {
+    .register{
+        margin-top: 0px;
+        text-align: center;                
+    }
+    .register li {
+        text-align: initial;
+    }
+    h2{
+        font-size: 2px larger;
+    }
+    h5{
+        font-size: larger;
+    }
+    .float-left{
+        text-align: center;
+        margin-left: 100px;
+    }
+    .signinform {
+        width: 85%;
+        margin-left: 8%;
+    }
+    
+    .welcome h1{
+    font-size:3em;
+    }
+}
+ 

@@ -1,0 +1,176 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/logo.svg' %}">
+  <!-- Title -->
+  <title>Invoice Generator | Dashboard</title>
+  <!-- Css sheet -->
+  <link rel="stylesheet" href="{% static 'css/header-footer.css' %}">
+  <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  <!-- Bootstrap CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <span class="display px-3 pt-3" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+  <main class="d-flex">
+    <div id="mySidenav" class="sidenav text-center">
+      <a class="display" href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <img class="mb-4" src="{% static 'images/logo.svg' %}">
+      <div class="invoices__button">
+        <img src="{% static 'images/invoices.svg' %}">
+        <label class="m-0">Invoices</label>
+      </div>
+      <div>
+        <img >
+      </div>
+    </div>
+    
+    <div class="w-100 p-4">
+      <div class="header__text navbar">
+        <h1>Invoices</h1>
+        <button>Create an invoice</button>
+        <img src="{% static 'images/hero-image.svg' %}">
+      </div>
+      <div class="filter p-2">
+        <span>0</span>
+        <label class="pl-2">Active filters</label>
+      </div>
+      <form class="">
+        <select class="col my-2 p-1">
+          <option>All clients</option>
+          <option>Kingabesh</option>
+          <option>Ninyo</option>
+          <option>Mark</option>
+          <option>Kadet</option>
+          <option>GiftTheExplorer</option>
+        </select>
+        <div class="d-flex col date p-1">
+          <input class="w-50" value="2020-08-23" type="date" placeholder="From">
+          <input class="w-50" value="2020-09-23" type="date" placeholder="To">
+       </div>
+        <div class="col input-group md-form form-sm form-2">
+          <input class="form-control my-0 py-1 red-border" type="text" placeholder="Search" aria-label="Search">
+          <div class="input-group-append">
+            <span class="input-group-text red lighten-3" id="basic-text1"><i class="fa fa-search text-grey"
+                aria-hidden="true"></i></span>
+              </div>
+            </div>
+      </form>
+
+      <section class="table__container my-5">
+        <div class="table">
+        <ul class="head">
+          <li>Date</li>
+          <li>Invoice Number</li>
+          <li>Client</li>
+          <li>Amount</li>
+          <li>Actions</li>
+        </ul>
+        <ul>
+          <li>09-08-2020</li>
+          <li>000027</li>
+          <li>HNG Internship</li>
+          <li>&#8358; 50,000,000</li>
+          <li><a href="#">View <i class="fa fa-angle-down"></i></a></li>
+        </ul>
+        <ul>
+          <li>09-08-2020</li>
+          <li>000027</li>
+          <li>HNG Internship</li>
+          <li>&#8358; 50,000,000</li>
+          <li><a href="#">View <i class="fa fa-angle-down"></i></a></li>
+        </ul>
+        <ul>
+          <li>09-08-2020</li>
+          <li>000027</li>
+          <li>HNG Internship</li>
+          <li>&#8358; 50,000,000</li>
+          <li><a href="#">View <i class="fa fa-angle-down"></i></a></li>
+        </ul>
+        <ul>
+          <li>09-08-2020</li>
+          <li>000027</li>
+          <li>HNG Internship</li>
+          <li>&#8358; 50,000,000</li>
+          <li><a href="#">View <i class="fa fa-angle-down"></i></a></li>
+        </ul>
+        <ul>
+          <li>09-08-2020</li>
+          <li>000027</li>
+          <li>HNG Internship</li>
+          <li>&#8358; 50,000,000</li>
+          <li><a href="#">View <i class="fa fa-angle-down"></i></a></li>
+        </ul>
+        <ul>
+          <li>09-08-2020</li>
+          <li>000027</li>
+          <li>HNG Internship</li>
+          <li>&#8358; 50,000,000</li>
+          <li><a href="#">View <i class="fa fa-angle-down"></i></a></li>
+        </ul>
+      </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="mt-5">
+    <div class="col-xl-11 row m-auto p-5">
+      <div class="col-lg-4">
+        <img class="mb-4 logo__img" src="{% static 'images/footer-logo.svg' %}">
+        <p>Invoice generator on-the-go for all freelancers. Super easy and fast. Look professional with InvoiceIt</p>
+      </div>
+    <ul class="col-lg">
+      <li>Explore</a></li>
+      <li><a href="#">About InvoiceIt</a></li>
+      <li><a href="#">Browse Templates</a></li>
+      <li><a href="#">Help</a></li>
+    </ul>
+    <ul class="col-lg">
+      <li>Legal</li>
+      <li><a href="#">Privacy Policy</a></li>
+      <li><a href="#">Terms of Use</a></li>
+      <li><a href="#">Cookie Policy</a></li>
+    </ul>
+    <div class="col-lg">
+      <ul>
+        <li>Contact</li>
+        <li><a href="#">support@invoiceit.io</a></li>
+      </ul>
+      <section>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-youtube"></i></a>
+      </section>
+    </div>
+  </div>
+    <div class="col-12 p-4 trademark text-center">
+      <small>&copy; InvoiceIt, All Rights Reserved</small>
+    </div>
+  </footer>
+
+
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+    </script>
+         
+</body>
+</html>

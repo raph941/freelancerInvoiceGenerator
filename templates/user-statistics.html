@@ -1,0 +1,183 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="{% static 'js/statistics.js' %}"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="{% static 'css/header-footer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/statistics.css' %}">
+    <title>Invoice Generator - Users Statistics Page</title>
+</head>
+<body>
+    <header id="header" class="mb-5 pb-5 container">
+      <nav class="navbar w-100">
+
+          <img class="logo__img" src="{% static 'images/logo.svg' %}">
+          <ul class="">
+              <li class="header__link"><a href="{% url 'login' %}">Sign In</a></li>
+              <li class="header__link sign__up"><a href="{% url 'signup' %}">Sign Up</a></li>
+          </ul>
+      </nav>
+    </header>
+    
+    <div data-aos="fade-left" class="header_img">
+        <img  class="img-fluid" src="{% static 'images/stat_header_img.png' %}" alt="">
+    </div>
+
+    <h4 class="compStat text-center font-weight-bold">Company User Statistics</h4>
+
+    <div class="mt-4">
+        <div class="statistics row" data-aos="fade-down">
+            <!-- pie chart -->
+            <div class="pie col-lg-6 col-12">
+                <div id="piechart_3d" class="pie_chart img-fluid bg-warning" ></div>
+            </div>
+    
+            <!-- style="width: 900px; height: 500px;" -->
+    
+            <!-- pie chart statement -->
+            <div class="frst chartStmt col-lg-6 col-12 p-4">
+                <p class="text-center">The pie chart displays the number of our satisfied users accross the continents of the world.</p>
+
+                <table class="text-center table table-borderless table-responsive text-light">
+                    <thead class="">
+                        <tr>
+                          <th class="pr-4">S/No</th>
+                          <th class="pl-4 pr-4">continents</th>
+                          <th class="pl-4 pr-4">Number (million)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>Asia</td>
+                          <td>11</td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>Africa</td>
+                          <td>9</td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td>Europe</td>
+                          <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>North America</td>
+                            <td>3</td>
+                          </tr>
+                          <tr>
+                            <td>5</td>
+                            <td>South America</td>
+                            <td>7</td>
+                          </tr>
+                          <tr>
+                            <td>6</td>
+                            <td>Australia</td>
+                            <td>3</td>
+                          </tr>
+                          <tr>
+                            <td>7</td>
+                            <td>Antartica</td>
+                            <td>8</td>
+                          </tr>
+                    </tbody>
+
+                </table>
+            </div>
+    
+        </div>
+        <br>
+        <div class="performance mt-4" data-aos="fade-up">
+            <h3 class="text-center font-weight-bold">Company Performance</h3>
+            <div class="row mt-4">
+                <div class="performanceStatement col-lg-5 col-12 chartStmt p-4 ">
+                    <p class="text-center">The line graph shows the performance of the company. From the graph, it can be deduced that our company is enjoying a steady progressive increase in gains while also reducing her losses.</p>
+                    <p>Our progressive gains guarantees;</p>
+                    <ol class="list-group">
+                        <li class="list-group-item text-info">Quality services</li>
+                        <li class="list-group-item text-info">Secured transactions</li>
+                    </ol>
+                </div>
+
+                <div class="performanceGraph col-lg-6 col-12 text-center">
+                    <div class="img-fluid" id="curve_chart" style="width: 700px; height: 500px"></div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="mt-5">
+      <div class="container row m-auto p-5">
+          <div class="col-lg-4">
+              <img class="mb-4 logo__img" src="{% static 'images/footer-logo.svg' %}">
+              <p>Invoice generator on-the-go for all freelancers. Super easy and fast. Look professional with InvoiceIt</p>
+          </div>
+          <ul class="col-lg">
+              <li>Explore</a>
+              </li>
+              <li><a href="#">About InvoiceIt</a></li>
+              <li><a href="#">Browse Templates</a></li>
+              <li><a href="#">Help</a></li>
+          </ul>
+          <ul class="col-lg">
+              <li>Legal</li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Use</a></li>
+              <li><a href="#">Cookie Policy</a></li>
+          </ul>
+          <div class="col-lg">
+              <ul>
+                  <li>Contact</li>
+                  <li><a href="#">Support</a></li>
+              </ul>
+              <section>
+                  <a href="#"><i class="fa fa-instagram"></i></a>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                  <a href="#"><i class="fa fa-facebook"></i></a>
+                  <a href="#"><i class="fa fa-youtube"></i></a>
+              </section>
+          </div>
+      </div>
+      <div class="col-12 p-4 trademark text-center">
+          <small>&copy; InvoiceIt, All Rights Reserved</small>
+      </div>
+  </footer>
+
+
+    
+
+
+
+  
+
+
+
+
+
+
+
+    <script src="./assets/js/statistics.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+          offset: 200,
+          duration: 1500
+      });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

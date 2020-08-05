@@ -1,0 +1,17 @@
+
+input{
+    border: 0px !important;
+    pointer-events: none;
+}
+
+#header{
+    margin-bottom: 0px !important;
+}
+
+.table__button {
+    display: none;
+}
+
+.image-upload label {
+    display: none;
+}

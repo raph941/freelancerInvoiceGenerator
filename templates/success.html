@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    <title>InvoiceIt | Success</title>
+{% endblock title %}
+{% block page_style %}
+    <link rel="stylesheet" href="{% static 'css/success.css' %}">
+{% endblock page_style %}
+
+{% block content %}
+
+<section class="container">
+    <div class="success-wrap mx-auto">
+      <div class="mx-auto">
+          <div class="success-icon text-center">
+              <span class="fas fa-check" aria-hidden="true"></span>
+          </div>
+          <h1>Thank you for invoicing with us!</h1>
+          <p>Your invoice has been generated and will be downloaded automatically, you can find it in your download folder</p>
+          <a class="btn btn-primary mb-4" href="#">Create a new Invoice</a>
+          <a class="btn btn-primary" href="#">Go to my invoices</a>
+      </div>
+    </div>
+</section>
+
+{% endblock content %}
+
+{% block page_script %}
+{% endblock page_script %}
