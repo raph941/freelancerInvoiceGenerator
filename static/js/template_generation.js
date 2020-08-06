@@ -313,7 +313,7 @@ $('.save__btn').click(function(){
                 "price": oneItemValues[3],
             };
 
-            listItemSend.push(oneItemValuesSend);
+            listItemSend.push(JSON.stringify(oneItemValuesSend));
         });
     }
     else {
@@ -338,7 +338,7 @@ $('.save__btn').click(function(){
     formSend.append('client_address', values.get("clientAddress"));
     formSend.append('client_country', values.get("clientCountry"));
     formSend.append('client_city', values.get("clientCity"));
-
+   
     formSend.append('invoice_items', listItemSend);
     formSend.append('subtotal', document.querySelector('#subTotal').innerText);
     formSend.append('sales_tax', document.querySelector('#taxes').innerText);
@@ -351,15 +351,14 @@ $('.save__btn').click(function(){
 
     request.onreadystatechange = (e) => {
         var data = request.responseText
-        console.log(data)
-        if (1==2) {           
+        if (data.message=="successful") {           
             $('.general-alerts').html(
-                '<div class="alert alert-success alert-dismissible fade show" role="alert">' +data.message+ '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>'
+                '<div class="alert alert-success alert-dismissible fade show" role="alert">' +data+ '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>'
             );
         }
         else{
             $('.general-alerts').html(
-                '<div class="alert alert-danger alert-dismissible fade show" role="alert">' +data.message+ '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>'
+                '<div class="alert alert-danger alert-dismissible fade show" role="alert">' +data+ '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>'
             );
         }
     }
