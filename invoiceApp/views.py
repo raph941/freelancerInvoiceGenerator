@@ -30,7 +30,6 @@ def saveInvoiceView(request):
         invoice_number = len(InvoiceModel.objects.all()) + 1
         str_in = str(invoice_number)
         inv_num = str_in.zfill(6)
-        import pdb; pdb.set_trace()
         invoice = InvoiceModel.objects.create(
             user = request.user,
             company_name = request.POST.get('company_name'),
@@ -53,18 +52,16 @@ def saveInvoiceView(request):
         )
         
         invoice_items = request.POST.get('invoice_items')
-        invoice_items = re.findall(r'(?<=\{).*?(?=\})', invoice_items)
+        invoice_items = eval('['+ invoice_items +']')
 
         for item in invoice_items:
-            import pdb; pdb.set_trace()
             invoiceItemsModel.objects.create(
                 invoice = invoice,
-                description = item.description,
-                rate = item.rate,
-                quantity = item.quantity,
-                price = item.price
+                description = item.get('description'),
+                rate = item.get('rate'),
+                quantity = item.get('quantity'),
+                price = item.get('price')
             )
-        import pdb; pdb.set_trace()
 
         return HttpResponse(json.dumps({"message": "successful"}),content_type="application/json")
     return HttpResponse(json.dumps({"message": "Unsuccessful"}),content_type="application/json")
