@@ -7,6 +7,7 @@ from django.views.static import serve
 from django.http import HttpResponse, HttpResponseRedirect
 
 import json
+import re
 
 
 def invoiceCreationView(request):
@@ -52,23 +53,18 @@ def saveInvoiceView(request):
         )
         
         invoice_items = request.POST.get('invoice_items')
-        import pdb; pdb.set_trace()
+        invoice_items = re.findall(r'(?<=\{).*?(?=\})', invoice_items)
 
         for item in invoice_items:
+            import pdb; pdb.set_trace()
             invoiceItemsModel.objects.create(
-                invoice = invoice
-                # description = 
-                # rate = 
-                # quantity = 
-                # price = 
+                invoice = invoice,
+                description = item.description,
+                rate = item.rate,
+                quantity = item.quantity,
+                price = item.price
             )
-      
-
-
-
-
-
-
+        import pdb; pdb.set_trace()
 
         return HttpResponse(json.dumps({"message": "successful"}),content_type="application/json")
     return HttpResponse(json.dumps({"message": "Unsuccessful"}),content_type="application/json")
