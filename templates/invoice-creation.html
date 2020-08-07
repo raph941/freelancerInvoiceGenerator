@@ -26,8 +26,9 @@
                             PDF
                         </button>
                     </div>
-
-                    <a class="btn btn-send save__btn">Save Now</a>
+                    <span class="save-btn__wrapper">
+                        <button class="btn btn-send save__btn">Save Now</button>
+                    </span>
                     
                 </div>
                 <!--Top Links-->
@@ -60,28 +61,28 @@
                         <input type="text" class="mt-2 invoiceCreation__inputGen font-weight-bold" disabled
                             aria-describedby="Your company" value="Your Company">
                         <input type="text" id="companyName" name="companyName" class="mt-2 invoiceCreation__inputGen "
-                            aria-describedby="company Name" placeholder="Company Name">
+                            aria-describedby="company Name" placeholder="Company Name" required>
                         
                         <input type="text" id="companyAddress" name="companyAddress" class="mt-2 invoiceCreation__inputGen "
-                            aria-describedby="company address" placeholder="Company Address">
+                            aria-describedby="company address" placeholder="Company Address" required>
                         <input type="text" id="companyCity" name="companyCity" class="mt-2 invoiceCreation__inputGen "
-                            aria-describedby="company city" placeholder="City, State">
+                            aria-describedby="company city" placeholder="City, State" required>
                         <input type="text" id="companyCountry" name="companyCity" class="mt-2 invoiceCreation__inputGen "
-                            aria-describedby="company country" placeholder="Country">
+                            aria-describedby="company country" placeholder="Country" required>
                     </div>
                     <div class=" col-12 col-lg-5 ml-auto">
 
                         <div class="d-flex justify-content-between flex-wrap flex-lg-nowrap mb-2">
                             <input type="text" class="mt-2 invoiceCreation__inputGen  mr-2 " disabled
                                 aria-describedby="Invoice Date" value="Invoice Date">
-                            <input type="date" id="invoiceDate" name="invoiceDate" class="mt-2 invoiceCreation__date "
+                            <input type="date" id="invoiceDate" name="invoiceDate" class="today mt-2 invoiceCreation__date "
                                 aria-describedby="insert invoice Date">
                         </div>
                         <div class="d-flex justify-content-between mb-2 flex-wrap flex-lg-nowrap mb-2">
 
                             <input type="text" class=" invoiceCreation__inputGen  mr-2 " disabled
                                 aria-describedby="Due Date" value="Due Date">
-                            <input type="date" id="dueDate" name="dueDate" class=" mt-2 mt-lg-0 invoiceCreation__date "
+                            <input type="date" id="dueDate" name="dueDate" class="today2 mt-2 mt-lg-0 invoiceCreation__date "
                                 aria-describedby="insert due Date">
                         </div>
                     </div>
@@ -239,12 +240,15 @@
 
 {% endblock content %}
 {% block page_script %}
+    <script>
+        // prefill the values of invoice date and due date, with today's date
+        let today = new Date().toISOString().substr(0, 10);
+        document.querySelector(".today").value = today;
+        document.querySelector(".today2").value = today;
+    </script>
     <script src="{% static 'js/invoiceCreation.js' %}"></script>
     <script src="{% static 'js/jspdf.debug.js' %}"></script>
     <script>if (window.define) delete window.define.amd;</script>
     <script src="{% static 'js/jspdf-autotable.js' %}"></script>
     <script src="{% static 'js/template_generation.js' %}"></script>
-    <script>
-
-    </script>
 {% endblock page_script %}

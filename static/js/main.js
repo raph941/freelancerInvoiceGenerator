@@ -3,10 +3,12 @@ var auth = "False"
 if (user == "AnonymousUser"){
     $('#data-store').attr( "auth", "False" );
     auth = "False"
+    $('.save-btn__wrapper').hide()
 }
 else{
     $('#data-store').attr( "auth", "True" );
     auth = "True"
+    $('.save-btn__wrapper').show()
 }
 
 
@@ -40,6 +42,7 @@ $('#loginform').submit(function(e){
                 );
                 $('#data-store').attr( "auth", "False" );
                 auth = "False"
+                $('.save-btn__wrapper').hide()
             }
             else{
                 $('#loginModal').modal('hide')
@@ -51,6 +54,7 @@ $('#loginform').submit(function(e){
                     '<div class="alert alert-success alert-dismissible fade show" role="alert">Login Successful<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>'
                 );
                 auth = "True"
+                $('.save-btn__wrapper').show()
             }
         }
     })

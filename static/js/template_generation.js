@@ -351,14 +351,18 @@ $('.save__btn').click(function(){
 
     request.onreadystatechange = (e) => {
         var data = request.responseText
-        if (data.message=="successful") {           
+        if (data=='{"message": "successful"}') {           
             $('.general-alerts').html(
-                '<div class="alert alert-success alert-dismissible fade show" role="alert">' +data+ '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>'
+                '<div class="alert alert-success alert-dismissible fade show" role="alert"> Your invoice has been saved, you can view it on your dashboard<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>'
             );
+            $('#invoice-form')[0].reset()
+            let today = new Date().toISOString().substr(0, 10);
+            document.querySelector(".today").value = today;
+            document.querySelector(".today2").value = today;
         }
         else{
             $('.general-alerts').html(
-                '<div class="alert alert-danger alert-dismissible fade show" role="alert">' +data+ '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>'
+                '<div class="alert alert-danger alert-dismissible fade show" role="alert"> An error occured please try again <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>'
             );
         }
     }

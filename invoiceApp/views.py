@@ -5,6 +5,7 @@ from .sheet import user_invoice
 from django.http import HttpResponse
 from django.views.static import serve
 from django.http import HttpResponse, HttpResponseRedirect
+from django.views.decorators.csrf import csrf_exempt
 
 import json
 import re
@@ -24,6 +25,7 @@ def invoiceCreationView(request):
     return render(request, 'invoice-creation.html', context)
 
 
+@csrf_exempt
 def saveInvoiceView(request):
     if request.POST:
 
